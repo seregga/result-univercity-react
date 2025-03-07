@@ -1,0 +1,12 @@
+.signin section {
+    margin-bottom: 20px;
+}
+
+.signin button {
+    background-color: rgb(34, 139, 230);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
