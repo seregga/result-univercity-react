@@ -1,0 +1,105 @@
+:root {
+    --label-font-size: 16px;
+    --article-font-size: 14px;
+    --input-font-size: 16px;
+    --input-padding: 8px 12px;
+    --input-height: 32px;
+}
+
+.input-field label {
+    font-size: var(--label-font-size);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.input-field input {
+    font-size: var(--input-font-size);
+    padding: var(--input-padding);
+    height: var(--input-height);
+    outline: none;
+    border: 1px solid rgb(206, 212, 218);
+}
+
+.input-field input:focus {
+    border-color: rgb(34, 139, 230);
+}
+
+.input-field input.error {
+    border-color: red;
+}
+
+.input-field .error-message {
+    color: red;
+}
+
+.input-field article {
+    font-size: var(--article-font-size);
+    color: rgb(134, 142, 150);
+}
+
+.input-field span {
+    width: 8px;
+    height: 13px;
+    background: url('../../assets/asterisk.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.input-field-xs {
+    --label-font-size: 12px;
+    --article-font-size: 10px;
+    --input-font-size: 12px;
+    --input-padding: 4px 8px;
+    --input-height: 24px;
+}
+
+.input-field-sm {
+    --label-font-size: 14px;
+    --article-font-size: 12px;
+    --input-font-size: 14px;
+    --input-padding: 6px 10px;
+    --input-height: 28px;
+}
+
+.input-field-md {
+    --label-font-size: 16px;
+    --article-font-size: 14px;
+    --input-font-size: 16px;
+    --input-padding: 8px 12px;
+    --input-height: 32px;
+}
+
+.input-field-lg {
+    --label-font-size: 18px;
+    --article-font-size: 16px;
+    --input-font-size: 18px;
+    --input-padding: 10px 14px;
+    --input-height: 36px;
+}
+
+.input-field-xl {
+    --label-font-size: 20px;
+    --article-font-size: 18px;
+    --input-font-size: 20px;
+    --input-padding: 12px 16px;
+    --input-height: 40px;
+}
+
+.el-before {
+    position: relative;
+}
+
+.el-before::before {
+    content: '@';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+.el-before input {
+    padding-left: 30px;
+}
