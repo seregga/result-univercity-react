@@ -1,24 +1,23 @@
-import './App.css';
-import Signin from './components/Signin/Signin';
-import Signup from './components/Signup/Signup';
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CategoryPage from './pages/CategoryPage';
+import ItemPage from './pages/ItemPage';
+import NotFound from './pages/NotFound';
+import Navbar from './components/Navbar';
 
 function App() {
-    const handleSigninSubmit = (data) => {
-        console.log('Signin:', data)
-      }
-    
-      const handleSignupSubmit = (data) => {
-        console.log('Signup:', data)
-      }
-    
-      return (
-        <div className='auth'>
-          <h1>Авторизация</h1>
-          <Signin onSubmit={handleSigninSubmit} />
-          <h1>Регистрация</h1>
-          <Signup onSubmit={handleSignupSubmit} />
-        </div>
-      );
+    return (
+        <BrowserRouter>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/category/:categoryName" element={<CategoryPage />} />
+                <Route path="/item/:categoryName/:id" element={<ItemPage />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App
