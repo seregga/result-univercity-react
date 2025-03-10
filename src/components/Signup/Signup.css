@@ -1,0 +1,24 @@
+.signup section {
+    margin-bottom: 20px;
+}
+
+.signup label {
+    margin-right: 20px;
+}
+
+.signup .gender {
+    display: flex;
+}
+
+.signup .error {
+    color: red;
+}
+
+.signup button {
+    background-color: rgb(34, 139, 230);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
